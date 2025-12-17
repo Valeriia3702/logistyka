@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - WinWin!t</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> WinWin<span>!t</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="solutions.html">Rozwiązania</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="contact.html" style="color:var(--primary-color)">Kontakt</a></li>
+            </ul>
+            <a href="demo.html" class="btn btn-outline">Strefa DEMO</a>
+             <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        <div class="container fade-in-up">
+            <h1>Kontakt</h1>
+            <p class="hero-subtitle">Rozpocznij transformację cyfrową już dziś.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info scroll-animate">
+                    <h2 style="margin-bottom: 30px;">Dane kontaktowe</h2>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Siedziba Główna:</strong><br>
+                            ul. Technologiczna 12/4<br>
+                            00-001 Warszawa, Polska
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Telefon:</strong><br>
+                            +48 123 456 789
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong><br>
+                            contact@winwinit.pl
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper scroll-animate">
+                    <h2 style="margin-bottom: 30px;">Wyślij wiadomość</h2>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Imię i Nazwisko" required>
+                        <input type="email" placeholder="Adres E-mail" required>
+                        <input type="text" placeholder="Temat" required>
+                        <textarea placeholder="Treść wiadomości..." rows="6"></textarea>
+                        <button type="submit" class="btn btn-primary" onclick="alert('Dziękujemy! Wiadomość wysłana (demo).')">Wyślij</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 WinWin!t System. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
