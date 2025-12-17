@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinWin!t - Inteligentne Śledzenie Paczek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <span><i class="fas fa-phone-alt"></i> +48 123 456 789</span>
+            <div class="top-links">
+                <a href="#contact">Kontakt</a>
+                <a href="#about">O nas</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-cube"></i> WinWin<span>!t</span>
+                <div class="logo-sub">relationship unlocked</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#solutions">Rozwiązania <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#industries">Branże <i class="fas fa-chevron-down"></i></a></li>
+                <li><a href="#resources">Zasoby</a></li>
+            </ul>
+            <a href="#" class="btn btn-outline" id="demo-trigger">Konsultacja i Demo</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text-box fade-in-up">
+                <div class="tech-frame"></div>
+                
+                <h1>Services, Solutions,<br>Software & DevOps</h1>
+                <p class="hero-subtitle">Inteligentna Transformacja Cyfrowa w służbie Twojego łańcucha dostaw.</p>
+                
+                <a href="#offer" class="btn btn-primary">Odkryj nasze rozwiązania</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Dlaczego My?</h2>
+            <div class="features-grid">
+                <div class="feature-card scroll-animate">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Śledzenie przesyłek z dokładnością do metra dzięki technologii GPS i IoT.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI Prediction</h3>
+                    <p>Nasze algorytmy przewidują opóźnienia zanim one nastąpią.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Bezpieczeństwo</h3>
+                    <p>Szyfrowanie danych blockchain gwarantuje nienaruszalność historii transportu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="section gradient-bg">
+        <div class="container">
+            <h2 class="section-title">Oferta Systemowa</h2>
+            <div class="offer-container">
+                <div class="offer-item scroll-animate">
+                    <div class="offer-img" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="offer-desc">
+                        <h3>Monitoring Floty</h3>
+                        <p>Zarządzaj całą flotą pojazdów w jednym dashboardzie.</p>
+                    </div>
+                </div>
+                <div class="offer-item scroll-animate">
+                    <div class="offer-img" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="offer-desc">
+                        <h3>Analityka Big Data</h3>
+                        <p>Raporty generowane w czasie rzeczywistym.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo-section" class="section demo-bg">
+        <div class="container center-text">
+            <h2 class="scroll-animate">Przetestuj System Demo</h2>
+            <p class="scroll-animate">Uruchom symulację, dodawaj paczki i śledź je na futurystycznej mapie (Dane zapisywane lokalnie).</p>
+            <div class="stats-counter scroll-animate">
+                <div class="stat">
+                    <span id="active-packages">0</span>
+                    <label>Aktywnych Paczek</label>
+                </div>
+                <div class="stat">
+                    <span id="system-status">Online</span>
+                    <label>Status Systemu</label>
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-primary" onclick="alert('Pełne demo z mapą zostanie dodane w kolejnym etapie! Sprawdź konsolę (F12), aby zobaczyć załadowane dane.')">Uruchom Symulację Mapy</button>
+            <button class="btn btn-outline" id="add-random-package">Dodaj losową paczkę (Test)</button>
+        </div>
+    </section>
+
+    <section id="contact" class="section dark-bg">
+        <div class="container">
+            <h2 class="section-title">Skontaktuj się</h2>
+            <form class="contact-form scroll-animate">
+                <input type="text" placeholder="Imię i Nazwisko" required>
+                <input type="email" placeholder="Adres E-mail" required>
+                <textarea placeholder="Wiadomość" rows="5"></textarea>
+                <button type="submit" class="btn btn-primary">Wyślij Wiadomość</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 WinWin!t System. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script src="demo_data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
