@@ -342,3 +342,145 @@ footer {
     .offer-desc { width: 100%; }
     .tech-frame { display: none; } /* Hide frame on mobile */
 }
+
+/* --- STYLE DLA PODSTRONY DEMO --- */
+
+/* Navbar w wersji demo */
+.navbar-demo {
+    position: relative; /* Nie sticky na demo */
+    background: var(--dark-bg);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 15px 0;
+}
+
+.demo-status-bar span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Główny layout demo (Flexbox) */
+.demo-container {
+    display: flex;
+    height: calc(100vh - 80px); /* Wysokość ekranu minus navbar */
+    overflow: hidden;
+}
+
+/* Panel boczny */
+.demo-sidebar {
+    width: 350px;
+    background: var(--secondary-bg);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Nie zmniejszaj paska */
+}
+
+.sidebar-header {
+    padding: 25px;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar-header h2 { font-size: 1.4rem; margin-bottom: 5px;}
+.sidebar-header p { font-size: 0.8rem; color: var(--text-muted);}
+
+.sidebar-controls { padding: 20px; }
+.full-width { width: 100%; display: block; text-align: center;}
+
+/* Lista przesyłek w panelu */
+.shipment-list-container {
+    padding: 20px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.shipment-list-container h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.scroller {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 5px;
+}
+
+/* Stylizacja paska przewijania (WebKit) */
+.scroller::-webkit-scrollbar { width: 5px; }
+.scroller::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+.scroller::-webkit-scrollbar-thumb { background: var(--primary-color); border-radius: 3px;}
+
+/* Pojedynczy element listy */
+.shipment-item {
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.shipment-item:hover { background: rgba(255,255,255,0.07); }
+
+/* Kolory statusów */
+.status-delivered { border-color: #2ecc71; }
+.status-transit { border-color: var(--primary-color); }
+.status-warehouse { border-color: #f39c12; }
+
+.ship-id { font-weight: 700; display: block; margin-bottom: 5px;}
+.ship-route { font-size: 0.85rem; color: var(--text-muted); display: block;}
+.ship-status-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    margin-top: 8px;
+}
+
+/* Mapa */
+.map-wrapper {
+    flex-grow: 1; /* Zajmij resztę miejsca */
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    background-color: #0b1120; /* Placeholder color */
+}
+
+/* Overlay informacyjny na mapie */
+.map-overlay-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(11, 17, 32, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    z-index: 500; /* Musi być nad mapą */
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Customizacja popupów Leaflet (aby pasowały do ciemnego motywu) */
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background: var(--secondary-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--primary-color);
+    border-radius: 0 !important;
+}
+.leaflet-popup-content h3 { color: var(--primary-color); margin-bottom: 5px;}
+.leaflet-container a.leaflet-popup-close-button { color: var(--text-muted) !important; }
+
+/* Responsywność Demo */
+@media(max-width: 900px) {
+    .demo-container { flex-direction: column; height: auto; }
+    .demo-sidebar { width: 100%; height: 400px; }
+    .map-wrapper { height: 500px; }
+}
