@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI w Logistyce - WinWin!t</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .graph-container { display: flex; align-items: flex-end; justify-content: space-around; height: 200px; background: #f9f9f9; padding: 20px; border-radius: 15px; margin: 30px 0; border: 1px solid #eee; }
+        .bar { width: 60px; background: var(--primary-color, #3498db); border-radius: 5px 5px 0 0; position: relative; transition: height 1s ease-in-out; }
+        .bar::after { content: attr(data-label); position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; }
+        .bar::before { content: attr(data-value); position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 12px; color: #333; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube"></i> WinWin<span>!t</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="solutions.html">Rozwiązania</a></li>
+                <li><a href="news.html" style="color:var(--primary-color)">Aktualności</a></li>
+                <li><a href="about.html">O nas</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <a href="demo.html" class="btn btn-outline">Strefa DEMO</a>
+        </div>
+    </nav>
+
+    <header class="page-header" style="background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container fade-in-up">
+            <h1>Wdrażamy AI w predykcji dostaw</h1>
+            <p class="hero-subtitle">Jak algorytmy WinAI zmieniają reguły gry.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <a href="news.html" class="btn btn-outline" style="margin-bottom: 30px;"><i class="fas fa-arrow-left"></i> Powrót</a>
+            
+            <h2>Rewolucja w czasie rzeczywistym</h2>
+            <p>Nasz najnowszy silnik WinAI Core przetwarza obecnie ponad 1,2 miliona punktów danych na sekundę. Dzięki integracji z systemami pogodowymi i natężeniem ruchu drogowego, precyzja naszych dostaw wzrosła o 22% w ostatnim kwartale.</p>
+            
+            <div class="graph-container scroll-animate">
+                <div class="bar" style="height: 40%;" data-value="40%" data-label="Q1"></div>
+                <div class="bar" style="height: 55%;" data-value="55%" data-label="Q2"></div>
+                <div class="bar" style="height: 75%;" data-value="75%" data-label="Q3"></div>
+                <div class="bar" style="height: 97%;" data-value="97%" data-label="Q4"></div>
+            </div>
+            <p style="text-align: center; font-style: italic;">Wykres: Wzrost skuteczności algorytmu WinAI w roku 2025.</p>
+
+            <p>Implementacja modelu pozwoliła na redukcję tzw. "pustych przebiegów" o blisko 15%, co przekłada się nie tylko na zysk finansowy naszych partnerów, ale również na realną ochronę środowiska.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 WinWin!t System. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
